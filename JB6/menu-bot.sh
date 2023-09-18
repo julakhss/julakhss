@@ -43,7 +43,7 @@ echo -e ""
 read -p " Select From Options [ 1 - 4 ] : " opt
 echo -e ""
 case $opt in
-1) clear ; wget ${BOT} && chmod +x jbssh.sh && ./jbssh.sh ;;
+1) clear ; wget ${BOT} && chmod +x xolpanel.sh && ./xolpanel.sh ;;
 2) clear ; bot-cek-tr ; exit ;;
 3) clear ; bot-cek-vless ; exit ;;
 4) clear ; bot-cek-login-ssh ; exit ;;

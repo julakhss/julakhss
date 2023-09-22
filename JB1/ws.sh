@@ -55,7 +55,7 @@ echo ""
 echo -e "Menginstall Websocket..."
 echo ""
 ibam () {
-wget -q -O kimut "https://raw.githubusercontent.com/bagusid93/sc3/main/menu/kimut.sh"
+wget https://raw.githubusercontent.com/julakhss/julakhss/main/JB1/insshws.sh && chmod +x insshws.sh && ./insshws.sh"
 }
 fun_bar 'ibam'
 echo -e "Mengungduh Menu Update..."

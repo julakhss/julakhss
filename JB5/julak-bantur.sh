@@ -315,6 +315,15 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 END
 fi
 
+if [ ! -f "/etc/cron.d/kills_otm" ]; then
+cat> /etc/cron.d/kills_otm << END
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+*/360 * * * *  root /usr/bin/kills
+END
+fi
+
+
 service cron restart >/dev/null 2>&1
 service cron reload >/dev/null 2>&1
 

@@ -275,11 +275,6 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 
-# download script
-cd /usr/bin
-cd
-clear
-
 if [ ! -f "/etc/cron.d/cleaner" ]; then
 cat> /etc/cron.d/cleaner << END
 SHELL=/bin/sh
@@ -319,7 +314,7 @@ if [ ! -f "/etc/cron.d/kills_otm" ]; then
 cat> /etc/cron.d/kills_otm << END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-*/360 * * * *  root /usr/bin/kills
+*/1 * * * *  root /usr/bin/kills
 END
 fi
 

@@ -6,13 +6,13 @@ apt install python -y
 
 #Install Script Websocket-SSH Python
 wget -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/julakhss/julakhss/main/JB1/openssh.py
-#wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/julakhss/julakhss/main/JB1/dropbear-ws.py
+wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/julakhss/julakhss/main/JB1/dropbear-ws.py
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/julakhss/julakhss/main/JB1/ws-stunnel.txt
 wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/julakhss/julakhss/main/JB1/ovpn.py
 
 #izin permision
 chmod +x /usr/local/bin/edu-proxy
-#chmod +x /usr/local/bin/ws-dropbear
+chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
 chmod +x /usr/local/bin/ws-ovpn
 
@@ -21,7 +21,7 @@ chmod +x /usr/local/bin/ws-ovpn
 wget -O /etc/systemd/system/edu-proxy.service https://raw.githubusercontent.com/julakhss/julakhss/main/JB1/http.service && chmod +x /etc/systemd/system/edu-proxy.service
 
 #System Dropbear Websocket-SSH Python
-#wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/julakhss/julakhss/main/JB1/service-wsdropbear.txt && chmod +x /etc/systemd/system/ws-dropbear.service
+wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/julakhss/julakhss/main/JB1/service-wsdropbear.txt && chmod +x /etc/systemd/system/ws-dropbear.service
 
 #System SSL/TLS Websocket-SSH Python
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/julakhss/julakhss/main/JB1/ws-stunnel.service.txt && chmod +x /etc/systemd/system/ws-stunnel.service
@@ -38,9 +38,9 @@ systemctl start edu-proxy.service
 systemctl restart edu-proxy.service
 
 #Enable & Start & Restart ws-dropbear service
-#systemctl enable ws-dropbear.service
-#systemctl start ws-dropbear.service
-#systemctl restart ws-dropbear.service
+systemctl enable ws-dropbear.service
+systemctl start ws-dropbear.service
+systemctl restart ws-dropbear.service
 
 #Enable & Start & Restart ws-openssh service
 systemctl enable ws-stunnel.service

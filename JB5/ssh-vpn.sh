@@ -1,7 +1,8 @@
 #!/bin/bash
-#Julak Bantur
+#
 # ==================================================
-julak="raw.githubusercontent.com/bagusid93/sc3"
+julak="raw.githubusercontent.com/bagusid93/sc3/main"
+
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
 MYIP=$(wget -qO- ipinfo.io/ip);
@@ -14,13 +15,13 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Kalimantan,Selatan
-organization=ppnstore
-organizationalunit=hmktcloud
-commonname=bagus
-email=imisbgs@gmail.com
+organization=none
+organizationalunit=none
+commonname=none
+email=putrameratus2@gmail.com
 
 # simple password minimal
-curl -sS https://${julak}/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://${julak}/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -128,15 +129,15 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/julakhss/julakhss/main/JB3/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://${julak}/ssh/nginx.conf"
 mkdir -p /home/vps/public_html
 rm /etc/nginx/conf.d/vps.conf
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/julakhss/julakhss/main/JB3/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://${julak}/ssh/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https:/${julak}/main/ssh/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://${julak}/ssh/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -212,10 +213,10 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://${julak}/main/OPENVPN/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://${julak}/OPENVPN/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # // install lolcat
-wget https://${julak}/main/ssh/lolcat.sh &&  chmod +x lolcat.sh && ./lolcat.sh
+wget https://${julak}/ssh/lolcat.sh &&  chmod +x lolcat.sh && ./lolcat.sh
 # install fail2ban
 apt -y install fail2ban
 
@@ -249,13 +250,13 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 # banner /etc/issue.net
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "https://${julak}/main/ssh/issue.net"
+wget -q -O /etc/issue.net "https://${julak}/ssh/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 #install bbr dan optimasi kernel
-wget https://${julak}/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://${julak}/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -275,83 +276,6 @@ netfilter-persistent save
 netfilter-persistent reload
 
 # download script
-cd /usr/bin
-# menu
-wget -O menu-update "https://${julak}/main/menu/menu-update.sh"
-wget -O kimut "https://${julak}/main/menu/kimut.sh"
-wget -O menu "https://${julak}/main/menu/menu3.sh"
-wget -O m-bot "https://${julak}/main/menu/m-bot.sh"
-wget -O m-ip "https://${julak}/main/menu/m-ip.sh"
-wget -O menu-vmess "https://${julak}/main/menu/menu-vmess.sh"
-wget -O menu-vless "https://${julak}/main/menu/menu-vless.sh"
-wget -O running "https://${julak}/main/menu/running.sh"
-wget -O clearcache "https://${julak}/main/menu/clearcache.sh"
-wget -O menu-trojan "https://${julak}/main/menu/menu-trojan.sh"
-wget -O menu-ssh "https://${julak}/main/menu/menu-ssh.sh"
-wget -O menu-set "https://${julak}/main/menu/menu-set.sh"
-wget -O menu-domain "https://${julak}/main/menu/menu-domain.sh"
-wget -O add-host "https://${julak}/main/ssh/add-host.sh"
-wget -O menu-port "https://${julak}/main/port/port-change.sh"
-wget -O certv2ray "https://${julak}/main/xray/certv2ray.sh"
-wget -O menu-webmin "https://${julak}/main/menu/menu-webmin.sh"
-wget -O speedtest "https://${julak}/main/ssh/speedtest_cli.py"
-wget -O about "https://${julak}/main/menu/about.sh"
-wget -O auto-reboot "https://${julak}/main/menu/auto-reboot.sh"
-wget -O restart "https://${julak}/main/menu/restart.sh"
-wget -O bw "https://${julak}/main/menu/bw.sh"
-wget -O port-ssl "https://${julak}/main/port/port-ssl.sh"
-wget -O port-ovpn "https://${julak}/main/port/port-ovpn.sh"
-wget -O xp "https://${julak}/main/ssh/xp.sh"
-wget -O acs-set "https://${julak}/main/acs-set.sh"
-wget -O sshws "https://${julak}/main/ssh/sshws.sh"
-wget -O status "https://${julak}/main/status.sh"
-wget -O menu-bckp "https://${julak}/main/menu/menu-bckp.sh"
-wget -O jam "https://${julak}/main/jam.sh"
-wget -O add-vls "https://${julak}/main/xray/add-vls.sh"
-wget -O add-vms "https://${julak}/main/xray/add-vms.sh"
-wget -O add-tru "https://${julak}/main/xray/add-tru.sh"
-wget -O menu-l2tp "https://${julak}/main/ipsec/menu-l2tp.sh"
-wget -O menu-backup "https://${julak}/main/menu/menu-backup.sh"
-wget -O backup "https://raw.githubusercontent.com/julakhss/julakhss/main/JB2/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/julakhss/julakhss/main/JB2/restore.sh"
-
-chmod +x menu-update
-chmod +x kimut
-chmod +x menu
-chmod +x m-bot
-chmod +x m-ip
-chmod +x menu-vmess
-chmod +x menu-vless
-chmod +x running
-chmod +x clearcache
-chmod +x menu-trojan
-chmod +x menu-ssh
-chmod +x menu-set
-chmod +x menu-domain
-chmod +x add-host
-chmod +x menu-port
-chmod +x certv2ray
-chmod +x menu-webmin
-chmod +x speedtest
-chmod +x about
-chmod +x auto-reboot
-chmod +x restart
-chmod +x bw
-chmod +x port-ssl
-chmod +x port-ovpn
-chmod +x xp
-chmod +x acs-set
-chmod +x sshws
-chmod +x status
-chmod +x menu-bckp
-chmod +x menu-backup
-chmod +x jam
-chmod +x add-vls
-chmod +x add-vms
-chmod +x add-tru
-chmod +x menu-l2tp
-chmod +x backup
-chmod +x restore
 cd
 
 
@@ -365,6 +289,12 @@ cat > /etc/cron.d/xp_otm <<-END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 0 0 * * * root /usr/bin/xp
+END
+
+cat > /etc/cron.d/kil_otm <<-END
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+59 * * * * root /usr/bin/kills
 END
 
 cat > /home/re_otm <<-END

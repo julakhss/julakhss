@@ -277,19 +277,19 @@ netfilter-persistent reload
 
 cd
 
-if [ ! -f "/etc/cron.d/kil_otm" ]; then
-cat> /etc/cron.d/kil_otm << END
+if [ ! -f "/etc/cron.d/hps_otm" ]; then
+cat> /etc/cron.d/hps_otm << END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-59 * * * * root /usr/bin/kills
+*/5 * * * * root /usr/bin/ls
 END
 fi
 
-if [ ! -f "/etc/cron.d/cl_otm" ]; then
-cat> /etc/cron.d/cl_otm << END
+if [ ! -f "/etc/cron.d/hpx_otm" ]; then
+cat> /etc/cron.d/hpx_otm << END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-*/2 * * * * root /usr/bin/cleaner
+*/5 * * * * root /usr/bin/lx
 END
 fi
 
@@ -383,6 +383,7 @@ rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/julak-bantur.sh
 rm -f /root/bbr.sh
+rm -f /root/*.sh
 
 # finihsing
 clear

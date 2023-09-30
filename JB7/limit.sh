@@ -126,7 +126,7 @@ systemctl daemon-reload
 systemctl restart qmtr
 systemctl enable qmtr
 # // Installing UDP Mini
-mkdir -p /usr/local/kyt/
+mkdir -p /usr/local/jb/
 wget -q -O /usr/local/jb/udp-mini "https://raw.githubusercontent.com/julakhss/julakhss/main/JB7/udp-mini"
 chmod +x /usr/local/jb/udp-mini
 wget -q -O /etc/systemd/system/udp-mini-1.service "https://raw.githubusercontent.com/julakhss/julakhss/main/JB7/udp-mini-1.service"

@@ -277,21 +277,21 @@ netfilter-persistent reload
 
 cd
 
-if [ ! -f "/etc/cron.d/hps_otm" ]; then
-cat> /etc/cron.d/hps_otm << END
-SHELL=/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-*/5 * * * * root /usr/bin/ls
-END
-fi
+#if [ ! -f "/etc/cron.d/hps_otm" ]; then
+#cat> /etc/cron.d/hps_otm << END
+#SHELL=/bin/sh
+#PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+#*/5 * * * * root /usr/bin/ls
+#END
+#fi
 
-if [ ! -f "/etc/cron.d/hpx_otm" ]; then
-cat> /etc/cron.d/hpx_otm << END
-SHELL=/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-*/5 * * * * root /usr/bin/lx
-END
-fi
+#if [ ! -f "/etc/cron.d/hpx_otm" ]; then
+#cat> /etc/cron.d/hpx_otm << END
+#SHELL=/bin/sh
+#PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+#*/5 * * * * root /usr/bin/lx
+#END
+#fi
 
 if [ ! -f "/etc/cron.d/xp_otm" ]; then
 cat> /etc/cron.d/xp_otm << END

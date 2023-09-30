@@ -73,6 +73,7 @@ mkdir -p /etc/ssh
 mkdir -p /usr/bin/xray/
 mkdir -p /var/log/xray/
 mkdir -p /var/www/html
+mkdir -p /home/vps/public_html
 mkdir -p /etc/jb/limit/vmess/ip
 mkdir -p /etc/jb/limit/vless/ip
 mkdir -p /etc/jb/limit/trojan/ip
@@ -81,6 +82,8 @@ mkdir -p /etc/limit/vmess
 mkdir -p /etc/limit/vless
 mkdir -p /etc/limit/trojan
 mkdir -p /etc/limit/ssh
+mkdir -p /etc/geostore/
+chown www-data.www-data /var/log/xray
 chmod 777 /var/log/xray/*.log
 touch /etc/bot/.bot.db
 touch /etc/vmess/.vmess.db

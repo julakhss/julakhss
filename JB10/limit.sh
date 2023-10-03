@@ -1,15 +1,6 @@
 #!/bin/bash
-# //====================================================
-# //	System Request:Debian 9+/Ubuntu 18.04+/20+
-# //	Author:	Julak Bantur
-# //	Dscription: Xray Management
-# //	email: putrameratus2@gmail.com
-# //  telegram: https://t.me/Cibut2d
-# //====================================================
-###########- COLOR CODE -##############
 
 clear
-
 wget -q -O /usr/local/sbin/quota "https://raw.githubusercontent.com/julakhss/julakhss/main/JB10/quota"
 chmod +x /usr/local/sbin/quota
 chmod + x /usr/local/sbin/quota

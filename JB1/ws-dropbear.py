@@ -5,14 +5,14 @@ LISTENING_ADDR = '127.0.0.1'
 if sys.argv[1:]:
   LISTENING_PORT = sys.argv[1]
 else:
-  LISTENING_PORT = 10015  
+  LISTENING_PORT = 10013  
 #Passwd
 PASS = ''
 
 # CONST
 BUFLEN = 4096 * 4
 TIMEOUT = 60
-DEFAULT_HOST = '127.0.0.1:22'
+DEFAULT_HOST = '127.0.0.1:109'
 RESPONSE = 'HTTP/1.1 101 <font color="green"><b>JULAK BANTUR</font></b>\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: foo\r\n\r\n'
 
 class Server(threading.Thread):

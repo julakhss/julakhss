@@ -122,7 +122,7 @@ make_folder_xray() {
 add_name() {
 clear
 echo -e  "${BLUE}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${YELLOW}|              MASUKKAN NAMA AUTHOR        |${NC}"
+echo -e  "${YELLOW}|       MASUKKAN NAMA AUTHOR        |${NC}"
 echo -e  "${BLUE}└──────────────────────────────────────────┘${NC}"
 echo " "
 read -rp "Masukan Nama Anda Disini : " -e pp
@@ -481,56 +481,56 @@ EOF
 }
 
 instalbot() {
-    cd
-    UUID=$(tr </dev/urandom -dc a-z | head -c8)
-    PB=$(cat /etc/slowdns/server.pub)
-    NS=$(cat /etc/xray/dns)
-    SD=$(cat /etc/xray/domain)
-    pip3.8 install --upgrade pip
-    pip3.8 install -r /etc/ftvpn/requirements.txt
-    pip3.8 install pyarmor
+    #cd
+    #UUID=$(tr </dev/urandom -dc a-z | head -c8)
+    #PB=$(cat /etc/slowdns/server.pub)
+    #NS=$(cat /etc/xray/dns)
+    #SD=$(cat /etc/xray/domain)
+    #pip3.8 install --upgrade pip
+    #pip3.8 install -r /etc/ftvpn/requirements.txt
+    #pip3.8 install pyarmor
 
-    cd
-    cat >/etc/ftvpn/var.txt <<EOF
-BOT_TOKEN="$TOKET"
-ADMIN="$IDTELE"
-DOMAIN="${SD}"
-PUB="${PB}"
-HOST="${NS}"
-SESSIONS="${UUID}"
-USER1="557345429"
-USER2="127484543"
-USER3="657482434"
-USER4="346482429"
-USER5="345582323"
-USER6="237482359"
-USER7="447482429"
-USER8="562487456"
-USER9="234482429"
-USER10="2118266757"
-EOF
+    #cd
+    #cat >/etc/ftvpn/var.txt <<EOF
+#BOT_TOKEN="$TOKET"
+#ADMIN="$IDTELE"
+#DOMAIN="${SD}"
+#PUB="${PB}"
+#HOST="${NS}"
+#SESSIONS="${UUID}"
+#USER1="557345429"
+#USER2="127484543"
+#USER3="657482434"
+#USER4="346482429"
+#USER5="345582323"
+#USER6="237482359"
+#USER7="447482429"
+#USER8="562487456"
+#USER9="234482429"
+#USER10="2118266757"
+#EOF
 
-    cat >/usr/bin/runbot <<EOF
+    #cat >/usr/bin/runbot <<EOF
 #!/bin/bash
 
-cd /etc
-python3.8 -m ftvpn
-EOF
-    cat >/etc/systemd/system/botftvpn.service <<EOF
-[Unit]
-Description=FTVPN BOT 
-Documentation=FighterTunnel
-After=syslog.target network-online.target
+#cd /etc
+#python3.8 -m ftvpn
+#EOF
+    #cat >/etc/systemd/system/botftvpn.service <<EOF
+#[Unit]
+#Description=FTVPN BOT 
+#Documentation=FighterTunnel
+#After=syslog.target network-online.target
 
-[Service]
-User=root
-NoNewPrivileges=true
-ExecStart=/usr/bin/runbot
+#[Service]
+#User=root
+#NoNewPrivileges=true
+#ExecStart=/usr/bin/runbot
 
-[Install]
-WantedBy=multi-user.target
+#[Install]
+#WantedBy=multi-user.target
 
-EOF
+#EOF
 
     cat >/etc/systemd/system/udp.service <<EOF
 [Unit]
@@ -553,12 +553,12 @@ RestartPreventExitStatus=23
 [Install]
 WantedBy=multi-user.target
 EOF
-    chmod +x /usr/bin/runbot
+    #chmod +x /usr/bin/runbot
     systemctl daemon-reload
-    systemctl stop botftvpn
-    systemctl enable botftvpn
-    systemctl start botftvpn
-    systemctl restart botftvpn
+    #systemctl stop botftvpn
+    #systemctl enable botftvpn
+    #systemctl start botftvpn
+    #systemctl restart botftvpn
     systemctl enable udp
     systemctl start udp
     systemctl restart udp
@@ -567,7 +567,7 @@ EOF
 restart_system() {
     USRSC=$(curl https://raw.githubusercontent.com/bagusid93/hss/main/sc3 | grep $ipsaya | awk '{print $2}')
     EXPSC=$(curl https://raw.githubusercontent.com/bagusid93/hss/main/sc3 | grep $ipsaya | awk '{print $3}')
-    TIME=`date -d "0 days" +"%d-%m-%Y - %X" `
+    TIME=`date -d "0 days" +"%d-%m-%Y" `
     TIMEZONE=$(printf '%(%H:%M:%S)T')
     TEXT="
 <code>────────────────────</code>

@@ -878,11 +878,11 @@ print_success "Fail2ban"
 function ins_epro(){
 clear
 print_install "Install WebSocket SSH"
-    wget -O /usr/bin/ws.py "https://github.com/julakhss/julakhss/raw/main/JB1/ws.py" >/dev/null 2>&1
+    wget -O /usr/bin/ws "${REPO}ws/ws" >/dev/null 2>&1
     wget -O /usr/bin/tun.conf "${REPO}ws/tun.conf" >/dev/null 2>&1
-    wget -O /etc/systemd/system/ws.service "https://github.com/julakhss/julakhss/raw/main/JB1/socks.service" >/dev/null 2>&1
+    wget -O /etc/systemd/system/ws.service "${REPO}ws/ws.service" >/dev/null 2>&1
     chmod +x /etc/systemd/system/ws.service
-    chmod +x /usr/bin/ws.py
+    chmod +x /usr/bin/ws
     chmod 644 /usr/bin/tun.conf
 systemctl disable ws
 systemctl stop ws

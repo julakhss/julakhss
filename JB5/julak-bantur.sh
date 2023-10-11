@@ -250,7 +250,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 # banner /etc/issue.net
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "https://raw.githubusercontent.com/julakhss/tangkal/main/JB3/issue.net"
+wget -q -O /etc/issue.net "https://raw.githubusercontent.com/ppnhss/haproxy/main/ssh/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
@@ -277,19 +277,11 @@ netfilter-persistent reload
 
 cd
 
-if [ ! -f "/etc/cron.d/hps_otm" ]; then
-cat> /etc/cron.d/hps_otm << END
+if [ ! -f "/etc/cron.d/kl_otm" ]; then
+cat> /etc/cron.d/kl_otm << END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-*/5 * * * * root /usr/bin/ls
-END
-fi
-
-if [ ! -f "/etc/cron.d/hpx_otm" ]; then
-cat> /etc/cron.d/hpx_otm << END
-SHELL=/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-*/5 * * * * root /usr/bin/lx
+*/2 * * * * root /usr/local/sbin/kills
 END
 fi
 
@@ -297,7 +289,7 @@ if [ ! -f "/etc/cron.d/xp_otm" ]; then
 cat> /etc/cron.d/xp_otm << END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-0 0 * * * root /usr/bin/xp
+0 0 * * * root /usr/local/sbin/xp
 END
 fi
 
@@ -321,6 +313,8 @@ cat > /home/re_otm <<-END
 7
 END
 
+echo "*/1 * * * * root echo -n > /var/log/nginx/access.log" >/etc/cron.d/log.nginx
+echo "*/1 * * * * root echo -n > /var/log/xray/access.log" >>/etc/cron.d/log.xray
 service cron restart >/dev/null 2>&1
 service cron reload >/dev/null 2>&1
 

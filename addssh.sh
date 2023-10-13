@@ -62,10 +62,10 @@ while [ $sec -gt 0 ]; do
 done
 clear 
 echo -e "\e[1;32mINPUT DEPENDECIES ACCOUNT $user\e[0m\n"
-until [[ $PASSWD =~ ^[a-zA-Z0-9]+$ ]]; do
+until [[ $Pass =~ ^[a-zA-Z0-9]+$ ]]; do
 read -p "Password : " Pass
 done
-until [[ $EXPIRED =~ ^[0-9]+$ ]]; do
+until [[ $masaaktif =~ ^[0-9]+$ ]]; do
 read -p "Expired (days): " masaaktif
 done
 until [[ $iplim =~ ^[0-9]+$ ]]; do

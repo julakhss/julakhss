@@ -213,7 +213,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget https://${julak}/OPENVPN/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/ppnhss/happroxy/main/ssh/openvpn &&  chmod +x openvpn && ./openvpn
 
 # // install lolcat
 wget https://${julak}/ssh/lolcat.sh &&  chmod +x lolcat.sh && ./lolcat.sh
@@ -285,6 +285,14 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 END
 fi
 
+if [ ! -f "/etc/cron.d/xl_otm" ]; then
+cat> /etc/cron.d/xl_otm << END
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+*/2 * * * * root /usr/local/sbin/xraylimit
+END
+fi
+
 if [ ! -f "/etc/cron.d/xp_otm" ]; then
 cat> /etc/cron.d/xp_otm << END
 SHELL=/bin/sh
@@ -313,8 +321,6 @@ cat > /home/re_otm <<-END
 7
 END
 
-echo "*/1 * * * * root echo -n > /var/log/nginx/access.log" >/etc/cron.d/log.nginx
-echo "*/1 * * * * root echo -n > /var/log/xray/access.log" >>/etc/cron.d/log.xray
 service cron restart >/dev/null 2>&1
 service cron reload >/dev/null 2>&1
 

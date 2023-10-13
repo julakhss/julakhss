@@ -85,7 +85,6 @@ CLIENT_EXISTS=$(grep -w $user /etc/ssh/.ssh.db | wc -l)
     read -n 1 -s -r -p "Press any key to back on menu"
     menu-ssh
   fi
-done
 sec=3
 spinner=(⣻ ⢿ ⡿ ⣟ ⣯ ⣷)
 while [ $sec -gt 0 ]; do
@@ -104,7 +103,6 @@ done
 until [[ $iplim =~ ^[0-9]+$ ]]; do
 read -p "Limit User (IP): " iplim
 done
-
 IP=$(curl -sS ifconfig.me);
 ossl=`cat /root/log-install.txt | grep -w "OpenVPN" | cut -f2 -d: | awk '{print $6}'`
 opensh=`cat /root/log-install.txt | grep -w "OpenSSH" | cut -f2 -d: | awk '{print $1}'`

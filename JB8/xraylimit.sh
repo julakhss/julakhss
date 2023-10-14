@@ -75,7 +75,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 "
         curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
          exp=$(grep -wE "^### $vmuser" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
-         sed -i "/^#vm $vmuser $exp/,/^},{/d" /etc/xray/config.json
+         sed -i "/^### $vmuser $exp/,/^},{/d" /etc/xray/config.json
          sed -i "/^#vmg $vmuser $exp/,/^},{/d" /etc/xray/config.json
          sed -i "/^### $vmuser $exp/d" /etc/vmess/.vmess.db
          systemctl restart xray
@@ -136,7 +136,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 "
         curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
          expvl=$(grep -wE "^#& $vlus" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
-         sed -i "/^#vl $vlus $expvl/,/^},{/d" /etc/xray/config.json
+         sed -i "/^#& $vlus $expvl/,/^},{/d" /etc/xray/config.json
          sed -i "/^#vlg $vlus $expvl/,/^},{/d" /etc/xray/config.json
          sed -i "/^### $vlus $expvl/d" /etc/vless/.vless.db
          rm /etc/xray/log-create-${vlus}.log
@@ -198,7 +198,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 "
         curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
          xptr=$(grep -wE "^#! $usrtr" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
-         sed -i "/^#tr $usrtr $xptr/,/^},{/d" /etc/xray/config.json
+         sed -i "/^#! $usrtr $xptr/,/^},{/d" /etc/xray/config.json
          sed -i "/^#trg $usrtr $xptr/,/^},{/d" /etc/xray/config.json
          sed -i "/^### $usrtr $xptr/d" /etc/trojan/.trojan.db
          rm /etc/xray/log-create-${usrtr}.log

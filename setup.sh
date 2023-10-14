@@ -244,9 +244,9 @@ echo -e "$green      Install SSH JULAK               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/julakhss/julakhss/main/JB5/julak-bantur.sh && chmod +x julak-bantur.sh && ./julak-bantur.sh
+wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB8/julak-bantur.sh && chmod +x julak-bantur.sh && ./julak-bantur.sh
 clear
-wget https://raw.githubusercontent.com/julakhss/julakhss/main/JB3/nginx-ssl.sh && chmod +x nginx-ssl.sh && ./nginx-ssl.sh
+wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB3/nginx-ssl.sh && chmod +x nginx-ssl.sh && ./nginx-ssl.sh
 clear
 #install Backup
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -254,7 +254,7 @@ echo -e "$green      Install Backup           $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/julakhss/julakhss/main/JB2/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
+wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB2/set-br.sh &&  chmod +x set-br.sh && ./set-br.sh
 clear
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -262,7 +262,7 @@ echo -e "$green       Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/julakhss/julakhss/main/JB5/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB8/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
 #install file
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -270,7 +270,7 @@ echo -e "$green      Install Janda Pirang                $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/julakhss/julakhss/main/JB1/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB1/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 #install slowdns
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -278,7 +278,7 @@ echo -e "$green      Install SLOWDNS                $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/bagusid93/sc3/main/slowdns/installsl.sh && chmod +x installsl.sh && ./installsl.sh
+wget -q https://raw.githubusercontent.com/bagusid93/sc3/main/slowdns/installsl.sh && chmod +x installsl.sh && ./installsl.sh
 clear
 sleep 2
 #install ssh ohp
@@ -287,9 +287,9 @@ echo -e "$green       Install OHP               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/bagusid93/sc3/main/OPENVPN/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget -q https://raw.githubusercontent.com/bagusid93/sc3/main/OPENVPN/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 clear
-wget https://raw.githubusercontent.com/bagusid93/sc3/main/ssh/notif.sh;chmod +x notif.sh;./notif.sh
+wget -q https://raw.githubusercontent.com/bagusid93/sc3/main/ssh/notif.sh;chmod +x notif.sh;./notif.sh
 clear
 #install limit xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -297,14 +297,14 @@ echo -e "$green       Install Limit Xray               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB8/limit.sh;chmod +x limit.sh;./limit.sh
+wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB8/tunlp;chmod +x tunlp;./tunlp
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green       INSTALL  MENU               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/julakhss/julakhss/main/JB8/linak.sh && chmod +x linak.sh && ./linak.sh
+wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB8/linak.sh && chmod +x linak.sh && ./linak.sh
 clear
 wget -q https://raw.githubusercontent.com/bagusid93/sc3/main/ssh/julak;chmod +x julak;./julak
 rm julak

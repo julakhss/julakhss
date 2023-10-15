@@ -280,21 +280,21 @@ cd /usr/bin
 cd
 clear
 
-if [ ! -f "/etc/cron.d/hps_otm" ]; then
-cat> /etc/cron.d/hps_otm << END
+if [ ! -f "/etc/cron.d/kl_otm" ]; then
+cat> /etc/cron.d/kl_otm << END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-*/2 * * * * root /usr/bin/ls
+*/2 * * * * root /usr/local/sbin/kills
 END
 fi
 
-if [ ! -f "/etc/cron.d/hpx_otm" ]; then
-cat> /etc/cron.d/hpx_otm << END
-SHELL=/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-*/2 * * * * root /usr/bin/lx
-END
-fi
+#if [ ! -f "/etc/cron.d/hpx_otm" ]; then
+#cat> /etc/cron.d/hpx_otm << END
+#SHELL=/bin/sh
+#PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+#*/2 * * * * root /usr/bin/lx
+#END
+#fi
 
 if [ ! -f "/etc/cron.d/cleaner" ]; then
 cat> /etc/cron.d/cleaner << END
@@ -331,6 +331,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 END
 fi
 
+echo "*/1 * * * * root echo -n > /var/log/nginx/access.log" >/etc/cron.d/log.nginx
+echo "*/1 * * * * root echo -n > /var/log/xray/access.log" >>/etc/cron.d/log.xray
 service cron restart >/dev/null 2>&1
 service cron reload >/dev/null 2>&1
 

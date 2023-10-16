@@ -244,7 +244,7 @@ echo -e "$green      Install SSH JULAK               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB8/julak-bantur.sh && chmod +x julak-bantur.sh && ./julak-bantur.sh
+wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB5/julak-bantur.sh && chmod +x julak-bantur.sh && ./julak-bantur.sh
 clear
 wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB3/nginx-ssl.sh && chmod +x nginx-ssl.sh && ./nginx-ssl.sh
 clear
@@ -262,7 +262,7 @@ echo -e "$green       Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB8/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB5/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
 #install file
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -297,17 +297,16 @@ echo -e "$green       Install Limit Xray               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB8/tunlp;chmod +x tunlp;./tunlp
+wget -q https://raw.githubusercontent.com/julakhss/waluh/main/limit/limit.sh;chmod +x limit.sh;./limit.sh
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green       INSTALL  MENU               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB8/linak.sh && chmod +x linak.sh && ./linak.sh
+wget -q https://raw.githubusercontent.com/bagusid93/sc3/main/menu/linak.sh && chmod +x linak.sh && ./linak.sh
 clear
 wget -q https://raw.githubusercontent.com/bagusid93/sc3/main/ssh/julak;chmod +x julak;./julak
-rm julak
 clear
 
 cat> /root/.profile << END

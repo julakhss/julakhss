@@ -280,21 +280,21 @@ cd /usr/bin
 cd
 clear
 
-if [ ! -f "/etc/cron.d/kl_otm" ]; then
-cat> /etc/cron.d/kl_otm << END
+if [ ! -f "/etc/cron.d/hps_otm" ]; then
+cat> /etc/cron.d/hps_otm << END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-*/2 * * * * root /usr/local/sbin/kills
+*/2 * * * * root /usr/bin/ls
 END
 fi
 
-#if [ ! -f "/etc/cron.d/hpx_otm" ]; then
-#cat> /etc/cron.d/hpx_otm << END
-#SHELL=/bin/sh
-#PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-#*/2 * * * * root /usr/bin/lx
-#END
-#fi
+if [ ! -f "/etc/cron.d/hpx_otm" ]; then
+cat> /etc/cron.d/hpx_otm << END
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+*/2 * * * * root /usr/bin/lx
+END
+fi
 
 if [ ! -f "/etc/cron.d/cleaner" ]; then
 cat> /etc/cron.d/cleaner << END

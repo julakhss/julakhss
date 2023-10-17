@@ -297,7 +297,7 @@ echo -e "$green       Install Limit Xray               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget -q https://raw.githubusercontent.com/julakhss/waluh/main/limit/limit.sh;chmod +x limit.sh;./limit.sh
+wget -q https://raw.githubusercontent.com/julakhss/julakhss/main/JB4/limp.sh;chmod +x limp.sh;./limp.sh
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green       INSTALL  MENU               $NC"

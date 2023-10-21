@@ -7,7 +7,7 @@ export TIME="10"
 export URL="https://api.telegram.org/bot$KEY/sendMessage"
 TEXT="
 <code>────────────────────</code>
-<b>⚠️NOTIF MULTILOGIN SC JB01⚠️</b>
+<b>⚠️NOTIF MULTILOGIN SC V.1.0⚠️</b>
 <code>────────────────────</code>
 <code>Username    : </code><code>$user</code>
 <code>Login Ip    : </code><code>$cekcek</code>

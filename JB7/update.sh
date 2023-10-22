@@ -1,6 +1,23 @@
 #!/bin/bash
-dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+# //====================================================
+# //	System Request:Debian 9+/Ubuntu 18.04+/20+
+# //	Author:	Julak Bantur
+# //	Dscription: Xray Menu Management
+# //	email: putrameratus2@gmail.com
+# //  telegram: https://t.me/Cibut2d
+# //====================================================
+# // font color configuration | JULAK BANTUR AUTOSCRIPT
+###########- COLOR CODE -##############
+colornow=$(cat /etc/julak/theme/color.conf)
+NC="\e[0m"
+RED="\033[0;31m"
+grenbo="\e[92;1m"
+GRENN="\e[92;1m"
+WC='\033[0m'
+COLOR1="$(cat /etc/julak/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
+COLBG1="$(cat /etc/julak/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+WH='\033[1;37m'
+###########- END COLOR CODE -##########
 red() { echo -e "\\033[32;1m${*}\\033[0m"; }
 clear
 fun_bar() {
@@ -30,7 +47,7 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-    wget "https://raw.githubusercontent.com/julakhss/julakhss/main/JB6/menu.zip"
+    wget "https://raw.githubusercontent.com/julakhss/julakhss/main/JB7/menu.zip"
     unzip menu.zip
     chmod +x menu/*
     mv menu/* /usr/local/sbin
@@ -40,15 +57,13 @@ res1() {
 }
 netfilter-persistent
 clear
-echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " \e[1;97;101m          UPDATE SCRIPT JULAK BANTUR       \e[0m"
-echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
+echo -e " $COLBG1       UPDATE SCRIPT JULAK BANTUR       $NC"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e ""
 echo -e "  \033[1;91m update script service\033[1;37m"
 fun_bar 'res1'
-echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e ""
 read -n 1 -s -r -p "Press [ Enter ] to back on menu"
 menu
-
-###########- COLOR CODE -##############

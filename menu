@@ -233,13 +233,6 @@ ISP=$(curl -s ipinfo.io/org?token=5c0c0745019c34 | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city?token=5c0c0745019c34 )
 WKT=$(curl -s ipinfo.io/timezone?token=5c0c0745019c34 )
 
-# CERTIFICATE STATUS
-d1=$(date -d "$exp" +%s)
-d2=$(date -d "$today" +%s)
-certificate=$(( (d1 - d2) / 86400 ))
-export sem=$( curl -s https://raw.githubusercontent.com/bagusid93/sc3/main/versi)
-IPVPS=$(curl -s ipinfo.io/ip )
-
 data_ip="https://raw.githubusercontent.com/bagusid93/hss/main/sc3"
 d2=$(date -d "$date_list" +"+%s")
 d1=$(date -d "$Exp" +"+%s")
@@ -280,7 +273,7 @@ echo -e "$COLOR1 ┌────────────────────
 echo -e "${BICyan} ${NC}  ${BICyan}HARI ini${NC}: ${Blue}$ttoday$NC ${BICyan}KEMARIN${NC}: ${Blue}$tyest$NC ${BICyan}BULAN${NC}: ${Blue}$tmon$NC $NC"
 echo -e "$COLOR1 └─────────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌─────────────────────────────────────────────────────┐${NC}" | lolcat
-echo -e " $COLOR1│$NC  ${WH}Version      ${NC} :${BICyan} ${sem} ${BICyan}LITE ${NC}"
+echo -e " $COLOR1│$NC  ${WH}Version      ${NC} :${BICyan} JB-01 LITE ${NC}"
 echo -e " $COLOR1│$NC  ${WH}User         ${NC} :${BIYellow} ${Name} ${NC}"
 echo -e " $COLOR1│$NC  ${WH}Expired      ${NC} :${Blue} ${Exp1}${NC} [${red}$dayleft${NC} ${COLOR1}Days${NC}] ${NC}"
 echo -e " $COLOR1└─────────────────────────────────────────────────────┘${NC}" | lolcat
@@ -296,7 +289,7 @@ case $opt in
 4) clear ; m-trojan ;;
 5) clear ; m-ssws ;;
 6) clear ; menu-set ;;
-7) clear ; run ;;
+7) clear ; running ;;
 8) clear ; menu-theme ;;
 9) clear ; menu-backup ;;
 10) clear ; autoreboot ;;

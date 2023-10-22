@@ -182,24 +182,24 @@ echo -e "\033[1;93m━━━━━━━━━━━━━━━━━\033[0m" |
 echo -e " CREATE TROJAN ACCOUNT          " | tee -a /etc/xray/log-create-${user}.log
 echo -e "\033[1;93m━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Remarks         : ${user}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "Host/IP           : ${domain}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "User Ip             : ${iplimit} IP" | tee -a /etc/xray/log-create-${user}.log
-echo -e "Xray Dns          : ${NS}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "Pubkey             : ${PUB}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "port  TLS           : 443" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Host/IP         : ${domain}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "User Ip         : ${iplimit} IP" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Xray Dns        : ${NS}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Pubkey          : ${PUB}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "port  TLS       : 443" | tee -a /etc/xray/log-create-${user}.log
 echo -e "port None TLS   : 80" | tee -a /etc/xray/log-create-${user}.log
-echo -e "port  TLS           : 443" | tee -a /etc/xray/log-create-${user}.log
-echo -e "Key              : ${uuid}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "Path             : (/multipath)/trojan-ws" | tee -a /etc/xray/log-create-${user}.log
-echo -e "ServiceName      : trojan-grpc" | tee -a /etc/xray/log-create-${user}.log
+echo -e "port  TLS       : 443" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Key             : ${uuid}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Path            : (/multipath)/trojan-ws" | tee -a /etc/xray/log-create-${user}.log
+echo -e "ServiceName     : trojan-grpc" | tee -a /etc/xray/log-create-${user}.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/log-create-${user}.log
-echo -e "Link TLS         : " | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link TLS        : " | tee -a /etc/xray/log-create-${user}.log
 echo -e "${trojanlink1}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/log-create-${user}.log
-echo -e "Link None TLS       : " | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link None TLS   : " | tee -a /etc/xray/log-create-${user}.log
 echo -e "${trojanlink2}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/log-create-${user}.log
-echo -e "Link GRPC        : " | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link GRPC       : " | tee -a /etc/xray/log-create-${user}.log
 echo -e "${trojanlink3}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Format OpenClash : https://${domain}:81/trojan-$user.txt" | tee -a /etc/xray/log-create-${user}.log

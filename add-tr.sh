@@ -1,37 +1,14 @@
 #!/bin/bash
-Green="\e[92;1m"
-RED="\033[31m"
-YELLOW="\033[33m"
-BLUE="\033[36m"
-FONT="\033[0m"
-GREENBG="\033[42;37m"
-NS=$( cat /etc/xray/dns )
-PUB=$( cat /etc/slowdns/server.pub )
-REDBG="\033[41;37m"
-OK="${Green}--->${FONT}"
-ERROR="${RED}[ERROR]${FONT}"
-GRAY="\e[1;30m"
-NC='\e[0m'
-red='\e[1;31m'
-green='\e[0;32m'
-DF='\e[39m'
-Bold='\e[1m'
-Blink='\e[5m'
-yell='\e[33m'
-red='\e[31m'
-green='\e[32m'
-blue='\e[34m'
-PURPLE='\e[35m'
-cyan='\e[36m'
-Lred='\e[91m'
-Lgreen='\e[92m'
-Lyellow='\e[93m'
-NC='\e[0m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-LIGHT='\033[0;37m'
-grenbo="\e[92;1m"
-red() { echo -e "\\033[32;1m${*}\\033[0m"; }
+dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+###########- COLOR CODE -##############
+colornow=$(cat /etc/julak/theme/color.conf)
+NC="\e[0m"
+RED="\033[0;31m"
+COLOR1="$(cat /etc/julak/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
+COLBG1="$(cat /etc/julak/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+WH='\033[1;37m'
+###########- END COLOR CODE -##########
 # Getting
 CHATID=$(grep -E "^#bot# " "/etc/bot/.bot.db" | cut -d ' ' -f 3)
 KEY=$(grep -E "^#bot# " "/etc/bot/.bot.db" | cut -d ' ' -f 2)
@@ -77,18 +54,18 @@ domain=$IP
 fi
 #tr="$(cat ~/log-install.txt | grep -w "Trojan WS " | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
-echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
+echo -e "\033[1;93m━━━━━━━━━━━━━━━━━◇\033[0m"
 echo -e " CREATE TROJAN ACCOUNT          "
-echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
+echo -e "\033[1;93m━━━━━━━━━━━━━━━━━◇\033[0m"
 
 		read -rp "User: " -e user
 		user_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
 		if [[ ${user_EXISTS} == '1' ]]; then
 clear
-    echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
+    echo -e "\033[1;93m━━━━━━━━━━━━━━━━━◇\033[0m"
     echo -e " CREATE TROJAN ACCOUNT          "
-    echo -e "\033[1;93m◇━━━━━━━━━━━━━━━━━◇\033[0m"
+    echo -e "\033[1;93m━━━━━━━━━━━━━━━━━◇\033[0m"
 			echo ""
 			echo "A client with the specified name was already created, please choose another name."
 			echo ""
@@ -174,8 +151,9 @@ TEXT="
 systemctl reload xray
 systemctl reload nginx
 service cron restart
-trojanlink="trojan://${uuid}@${domain}:443?path=%2Ftrojan-ws&security=tls&host=${domain}&type=ws&sni=${domain}#${user}"
-trojanlink1="trojan://${uuid}@${domain}:443?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=${domain}#${user}"
+trojanlink3="trojan://${uuid}@${domain}:443?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=${domain}#${user}"
+trojanlink1="trojan://${uuid}@${domain}:443?path=%2Ftrojan-ws&security=tls&host=${domain}&type=ws&sni=${domain}#${user}"
+trojanlink2="trojan://${uuid}@${domain}:80?path=%2Ftrojan-ws&security=auto&host=${domain}&type=ws#${user}"
 if [ ! -e /etc/trojan ]; then
   mkdir -p /etc/trojan
 fi
@@ -201,32 +179,35 @@ DATADB=$(cat /etc/trojan/.trojan.db | grep "^###" | grep -w "${user}" | awk '{pr
 if [[ "${DATADB}" != '' ]]; then
   sed -i "/\b${user}\b/d" /etc/trojan/.trojan.db
 fi
-echo "### ${user} ${exp} ${uuid} ${Quota} ${iplimit}" >>/etc/trojan/.trojan.db
+echo "### ${user} ${exp} ${uuid} ${iplimit}" >>/etc/trojan/.trojan.db
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL
 clear
-echo -e "\033[1;93m━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " CREATE TROJAN ACCOUNT          "
-echo -e "\033[1;93m━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "Remarks          : ${user}" 
-echo -e "Host/IP          : ${domain}"
-echo -e "User Ip           : ${iplimit} IP"
-echo -e "Xray Dns.        : ${NS}"
-echo -e "Pubkey.          : ${PUB}"
-echo -e "port  TLS           : 443"
-echo -e "port None TLS   : 80"
-echo -e "port  TLS           : 443"
-echo -e "Key              : ${uuid}" 
-echo -e "Path             : (/multipath)/trojan-ws" 
-echo -e "ServiceName      : trojan-grpc" 
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "Link WS TLS         : ${trojanlink1}" 
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "Link WS None TLS   : ${trojanlink2}" 
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "Link GRPC        : ${trojanlink3}" 
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "Format OpenClash : https://${domain}:81/trojan-$user.txt" 
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m" 
-echo -e "Expired    : $expe"
-echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m" 
-echo "" 
+echo -e "\033[1;93m━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/log-create-${user}.log
+echo -e " CREATE TROJAN ACCOUNT          " | tee -a /etc/xray/log-create-${user}.log
+echo -e "\033[1;93m━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Remarks         : ${user}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Host/IP         : ${domain}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "User Ip         : ${iplimit} IP" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Xray Dns        : ${NS}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Pubkey          : ${PUB}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "port  TLS       : 443" | tee -a /etc/xray/log-create-${user}.log
+echo -e "port None TLS   : 80" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Port  TLS       : 443" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Id             : ${uuid}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Path            : (/multipath)/trojan-ws" | tee -a /etc/xray/log-create-${user}.log
+echo -e "ServiceName     : trojan-grpc" | tee -a /etc/xray/log-create-${user}.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link TLS        : " | tee -a /etc/xray/log-create-${user}.log
+echo -e "${trojanlink1}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link None TLS   : " | tee -a /etc/xray/log-create-${user}.log
+echo -e "${trojanlink2}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link GRPC       : " | tee -a /etc/xray/log-create-${user}.log
+echo -e "${trojanlink3}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Format OpenClash : https://${domain}:81/trojan-$user.txt" | tee -a /etc/xray/log-create-${user}.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m"  | tee -a /etc/xray/log-create-${user}.log
+echo -e "Expired    : $expe" | tee -a /etc/xray/log-create-${user}.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/log-create-${user}.log
+echo "" | tee -a /etc/xray/log-create-${user}.log

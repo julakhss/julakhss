@@ -54,27 +54,29 @@ domain=$IP
 fi
 #tr="$(cat ~/log-install.txt | grep -w "Trojan WS " | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
-echo -e "\033[1;93m━━━━━━━━━━━━━━━━━◇\033[0m"
-echo -e " CREATE TROJAN ACCOUNT          "
-echo -e "\033[1;93m━━━━━━━━━━━━━━━━━◇\033[0m"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
+echo -e "$COLBG1        Add Xray/Trojan Account          $NC"
+echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 
 		read -rp "User: " -e user
 		user_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
 		if [[ ${user_EXISTS} == '1' ]]; then
 clear
-    echo -e "\033[1;93m━━━━━━━━━━━━━━━━━◇\033[0m"
-    echo -e " CREATE TROJAN ACCOUNT          "
-    echo -e "\033[1;93m━━━━━━━━━━━━━━━━━◇\033[0m"
+    echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
+    echo -e "$COLBG1        Add Xray/Trojan Account          $NC"
+    echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 			echo ""
 			echo "A client with the specified name was already created, please choose another name."
 			echo ""
-			echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m"
+			echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 			read -n 1 -s -r -p "Press any key to back on menu"
 			m-trojan
 		fi
 	done
 
+PUB=$(cat /etc/slowdns/server.pub)
+NS=$(cat /etc/xray/dns)
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 #read -p "Limit User (GB): " Quota
@@ -190,10 +192,10 @@ echo -e "Host/IP         : ${domain}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "User Ip         : ${iplimit} IP" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Xray Dns        : ${NS}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Pubkey          : ${PUB}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Id             : ${uuid}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "port  TLS       : 443" | tee -a /etc/xray/log-create-${user}.log
 echo -e "port None TLS   : 80" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Port  TLS       : 443" | tee -a /etc/xray/log-create-${user}.log
-echo -e "Id             : ${uuid}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Path            : (/multipath)/trojan-ws" | tee -a /etc/xray/log-create-${user}.log
 echo -e "ServiceName     : trojan-grpc" | tee -a /etc/xray/log-create-${user}.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/log-create-${user}.log

@@ -275,16 +275,11 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 
-# download script
-cd /usr/bin
-cd
-clear
-
 if [ ! -f "/etc/cron.d/hps_otm" ]; then
 cat> /etc/cron.d/hps_otm << END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-*/2 * * * * root /usr/bin/ls
+*/2 * * * * root /usr/local/sbin/ls
 END
 fi
 
@@ -292,17 +287,17 @@ fi
 #cat> /etc/cron.d/hpx_otm << END
 #SHELL=/bin/sh
 #PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-#*/2 * * * * root /usr/bin/lx
+#*/2 * * * * root /usr/local/sbin/lx
 #END
 #fi
 
-if [ ! -f "/etc/cron.d/cleaner" ]; then
-cat> /etc/cron.d/cleaner << END
-SHELL=/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-*/2 * * * * root /usr/bin/cleaner
-END
-fi
+#if [ ! -f "/etc/cron.d/cleaner" ]; then
+#cat> /etc/cron.d/cleaner << END
+#SHELL=/bin/sh
+#PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+#*/2 * * * * root /usr/bin/cleaner
+#END
+#fi
 
 if [ ! -f "/etc/cron.d/re_otm" ]; then
 cat> /etc/cron.d/re_otm << END
@@ -316,7 +311,7 @@ if [ ! -f "/etc/cron.d/xp_otm" ]; then
 cat> /etc/cron.d/xp_otm << END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-0 0 * * * root /usr/bin/xp
+0 0 * * * root /usr/local/sbin/xp
 END
 fi
 cat > /home/re_otm <<-END
@@ -395,6 +390,7 @@ rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/julak-bantur.sh
 rm -f /root/bbr.sh
+rm -f /root/*.sh
 
 # finihsing
 clear

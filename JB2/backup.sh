@@ -105,7 +105,7 @@ cp /etc/passwd backup/
 cp /etc/group backup/
 cp /etc/shadow backup/
 cp /etc/gshadow backup/
-#cp -r /var/lib/ backup/
+cp -r /var/lib/julak backup/
 echo -e "\033[0;33m Proses Backup Xray \033[0m"
 echo ""
 cp -r /etc/xray backup/xray

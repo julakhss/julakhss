@@ -240,8 +240,9 @@ d1=$(date -d "$Exp" +"+%s")
 dayleft=$(( ($d1 - $d2) / 86400 ))
 
 clear
-figlet  Permium Script  | lolcat
-echo -e "${COLOR1}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}" | lolcat
+echo -e "${COLOR1}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+echo -e "$COLOR1 ${NC}${COLBG1}                  🔥 INFORMASI VPS 🔥                    ${NC} $COLOR1 $NC"
+echo -e "${COLOR1}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
 echo -e "🔰${CYAN} Server Uptime       👉 ${COLOR1}$( uptime -p  | cut -d " " -f 2-10000 ) ${NC}"
 echo -e "🔰${CYAN} Current Time        👉 ${COLOR1}$( date -d "0 days" +"%d-%m-%Y | %X" )${NC}"
 echo -e "🔰${CYAN} Operating System    👉 ${COLOR1}$( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' ) ( $( uname -m) )${NC}"
@@ -252,8 +253,8 @@ echo -e "🔰${CYAN} Current Domain      👉 ${COLOR1}$( cat /etc/xray/domain )
 echo -e "🔰${CYAN} NS Domain           👉 ${COLOR1}$( cat /etc/xray/dns )${NC}"
 echo -e "🔰${CYAN} Jumlah Ram          👉 ${COLOR1}${totalram} MB"
 echo -e "🔰${CYAN} CPU Usage           👉 ${COLOR1}$cpu_usage"
-echo -e "🔰${CYAN} Whatsapp            👉 ${COLOR1}081250851741${NC}"
-echo -e "🔰${CYAN} AutoScript By       👉 ${COLOR1}PAPADA'AN STORE${NC}"
+#echo -e "🔰${CYAN} Whatsapp            👉 ${COLOR1}081250851741${NC}"
+#echo -e "🔰${CYAN} AutoScript By       👉 ${COLOR1}PAPADA'AN STORE${NC}"
 echo -e "${COLOR1}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
   echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"

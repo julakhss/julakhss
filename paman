@@ -311,9 +311,9 @@ echo -e "$COLOR1 ${NC}   ${COLBG1}${WH}• XRAY VMESS •    ${NC} $COLOR1 $NC" 
 echo -e "$COLOR1──────────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "$COLOR1 ${NC} ${WH}Remarks        ${COLOR1}: ${WH}${user}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "$COLOR1 ${NC} ${WH}Domain         ${COLOR1}: ${WH}${domain}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "$COLOR1 ${NC} ${WH}Host Dns         ${COLOR1}: ${WH}${NS}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "$COLOR1 ${NC} ${WH}Host Dns       ${COLOR1}: ${WH}${NS}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "$COLOR1 ${NC} ${WH}Pubkey         ${COLOR1}: ${WH}${PUB}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "$COLOR1 ${NC} ${WH}Limit IP      ${COLOR1}: ${WH}${iplimit} Login" | tee -a /etc/xray/log-create-${user}.log
+echo -e "$COLOR1 ${NC} ${WH}Limit IP       ${COLOR1}: ${WH}${iplimit} Login" | tee -a /etc/xray/log-create-${user}.log
 echo -e "$COLOR1 ${NC} ${WH}Port TLS       ${COLOR1}: ${WH}443" | tee -a /etc/xray/log-create-${user}.log
 echo -e "$COLOR1 ${NC} ${WH}Port none TLS  ${COLOR1}: ${WH}80" | tee -a /etc/xray/log-create-${user}.log
 echo -e "$COLOR1 ${NC} ${WH}Port gRPC      ${COLOR1}: ${WH}443" | tee -a /etc/xray/log-create-${user}.log
@@ -333,9 +333,9 @@ echo -e "$COLOR1─────────────────────�
 echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket GRPC     ${WH}: ${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "$COLOR1${NC}${WH}${vmesslink3}${NC}"  | tee -a /etc/xray/log-create-${user}.log
 echo -e "$COLOR1──────────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "$COLOR1 ${NC} ${COLOR1}Format OpenClash     ${WH}: https://${domain}:81/vmess-$user.txt"
+echo -e "$COLOR1 ${NC} ${COLOR1}Format OpenClash ${WH}: https://${domain}:81/vmess-$user.txt"
 echo -e "$COLOR1──────────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "$COLOR1 ${NC}${WH}Expired On     ${COLOR1}: ${WH}$exp" | tee -a /etc/xray/log-create-${user}.log
+echo -e "$COLOR1 ${NC}${WH}Expired On   ${COLOR1}: ${WH}$exp" | tee -a /etc/xray/log-create-${user}.log
 echo -e "$COLOR1──────────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "$COLOR1┌────────────────────────┐${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "$COLOR1 ${NC}   ${WH}• $author •${NC}    $COLOR1 $NC" | tee -a /etc/xray/log-create-${user}.log

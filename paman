@@ -274,7 +274,7 @@ TEXT="<code>◇━━━━━━━━━━━━━━━━━◇</code>
 <code>◇━━━━━━━━━━━━━━━━━◇</code>
 <code>Remarks   : ${user}
 Domain    : ${domain}
-Limit IP : ${iplimit} Login
+Limit IP  : ${iplimit} Login
 Port TLS  : 443
 Port NTLS : 80
 id        : ${uuid}

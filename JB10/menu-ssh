@@ -214,7 +214,7 @@ echo -e "${WH}Port SSH SSL/TLS ${COLOR1}: ${WH}443" | tee -a /etc/xray/log-creat
 echo -e "${WH}Port Ovpn TCP    ${COLOR1}: ${WH}443,1194" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}Port Ovpn UDP    ${COLOR1}: ${WH}2200" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}Port Ovpn SSL    ${COLOR1}: ${WH}443" | tee -a /etc/xray/log-createssh-${user}.log
-echo -e "${WH}OpenVPN Config         ${COLOR1}: ${WH}https://$domain:81/all-ovpn.zip" | tee -a /etc/xray/log-createssh-${user}.log
+echo -e "${WH}OpenVPN Config   ${COLOR1}: ${WH}https://$domain:81/all-ovpn.zip" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}UDPGW            ${COLOR1}: ${WH}7100-7900" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "$COLOR1─────────────────${NC}" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}PORT SLWDNS      ${COLOR1}: ${WH}80,22,53" | tee -a /etc/xray/log-createssh-${user}.log
@@ -253,7 +253,7 @@ echo -e "${WH}Port SSH SSL/TLS ${COLOR1}: ${WH}443" | tee -a /etc/xray/log-creat
 echo -e "${WH}Port Ovpn TCP    ${COLOR1}: ${WH}443,1194" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}Port Ovpn UDP    ${COLOR1}: ${WH}2200" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}Port Ovpn SSL    ${COLOR1}: ${WH}443" | tee -a /etc/xray/log-createssh-${user}.log
-echo -e "${WH}OpenVPN Config         ${COLOR1}: ${WH}https://$domain:81/all-ovpn.zip" | tee -a /etc/xray/log-createssh-${user}.log
+echo -e "${WH}OpenVPN Config   ${COLOR1}: ${WH}https://$domain:81/all-ovpn.zip" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}UDPGW            ${COLOR1}: ${WH}7100-7900" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "$COLOR1─────────────────${NC}" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}PORT SLWDNS      ${COLOR1}: ${WH}80,22,53" | tee -a /etc/xray/log-createssh-${user}.log
@@ -375,7 +375,7 @@ TEXT="
 <code>Port OVPN SSL    : </code> <code>443</code>
 <code>Port OVPN TCP    : </code> <code>443, 1194</code>
 <code>Port OVPN UDP    : </code> <code>220</code>
-<code>OpenVPN CONFIG      : </code> https://$domain:81/all-ovpn.zip
+<code>OpenVPN CONFIG   : </code> https://$domain:81/all-ovpn.zip
 <code>Proxy Squid      : </code> <code>3128</code>
 <code>BadVPN UDP       : </code> <code>7100, 7300, 7300</code>
 <code>───────────────────</code>
@@ -411,7 +411,7 @@ echo -e "${WH}Port SSH SSL/TLS ${COLOR1}: ${WH}443" | tee -a /etc/xray/log-creat
 echo -e "${WH}Port Ovpn TCP    ${COLOR1}: ${WH}443,1194" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}Port Ovpn UDP    ${COLOR1}: ${WH}2200" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}Port Ovpn SSL    ${COLOR1}: ${WH}443" | tee -a /etc/xray/log-createssh-${user}.log
-echo -e "${WH}OpenVPN Config         ${COLOR1}: ${WH}https://$domain:81/all-ovpn.zip" | tee -a /etc/xray/log-createssh-${user}.log
+echo -e "${WH}OpenVPN Config   ${COLOR1}: ${WH}https://$domain:81/all-ovpn.zip" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}UDPGW            ${COLOR1}: ${WH}7100-7900" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "$COLOR1─────────────────${NC}" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}PORT SLWDNS      ${COLOR1}: ${WH}80,22,53" | tee -a /etc/xray/log-createssh-${user}.log
@@ -450,7 +450,7 @@ echo -e "${WH}Port SSH SSL/TLS ${COLOR1}: ${WH}443" | tee -a /etc/xray/log-creat
 echo -e "${WH}Port Ovpn TCP    ${COLOR1}: ${WH}443,1194" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}Port Ovpn UDP    ${COLOR1}: ${WH}2200" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}Port Ovpn SSL    ${COLOR1}: ${WH}443" | tee -a /etc/xray/log-createssh-${user}.log
-echo -e "${WH}OpenVPN Config         ${COLOR1}: ${WH}https://$domain:81/all-ovpn.zip" | tee -a /etc/xray/log-createssh-${user}.log
+echo -e "${WH}OpenVPN Config   ${COLOR1}: ${WH}https://$domain:81/all-ovpn.zip" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}UDPGW            ${COLOR1}: ${WH}7100-7900" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "$COLOR1─────────────────${NC}" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}PORT SLWDNS      ${COLOR1}: ${WH}80,22,53" | tee -a /etc/xray/log-createssh-${user}.log

@@ -148,6 +148,81 @@ vmesslink1="vmess://$(echo $asu | base64 -w 0)"
 vmesslink2="vmess://$(echo $ask | base64 -w 0)"
 vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 
+cat >/var/www/html/vmess-$user.txt <<-END
+
+---------------------
+# Format Vmess WS (CDN)
+---------------------
+
+- name: Vmess-$user-WS (CDN)
+  type: vmess
+  server: ${domain}
+  port: 443
+  uuid: ${uuid}
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ${domain}
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: ${domain}
+---------------------
+# Format Vmess WS (CDN) Non TLS
+---------------------
+
+- name: Vmess-$user-WS (CDN) Non TLS
+  type: vmess
+  server: ${domain}
+  port: 80
+  uuid: ${uuid}
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: false
+  skip-cert-verify: false
+  servername: ${domain}
+  network: ws
+  ws-opts:
+    path: /vmess
+    headers:
+      Host: ${domain}
+---------------------
+# Format Vmess gRPC (SNI)
+---------------------
+
+- name: Vmess-$user-gRPC (SNI)
+  server: ${domain}
+  port: 443
+  type: vmess
+  uuid: ${uuid}
+  alterId: 0
+  cipher: auto
+  network: grpc
+  tls: true
+  servername: ${domain}
+  skip-cert-verify: true
+  grpc-opts:
+    grpc-service-name: vmess-grpc
+
+---------------------
+ Link Akun Vmess                   
+---------------------
+Link TLS         : 
+${vmesslink1}
+---------------------
+Link none TLS    : 
+${vmesslink2}
+---------------------
+Link GRPC        : 
+${vmesslink3}
+---------------------
+
+END
+
 if [ ! -e /etc/vmess ]; then
   mkdir -p /etc/vmess
 fi
@@ -202,6 +277,8 @@ TEXT="
 <code>Link GRPC    :</code> 
 <code>${vmesslink3}</code>
 <code>──────────────────────</code>
+<code>Format OpenClash    : https://${domain}:81/vmess-$user.txt
+<code>──────────────────────</code>
 <code>Expired On : $exp</code>
 <code>──────────────────────</code>
 "
@@ -237,6 +314,8 @@ echo -e "$COLOR1${NC}${WH}${vmesslink2}${NC}"  | tee -a /etc/xray/log-create-${u
 echo -e "$COLOR1──────────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket GRPC     ${WH}: ${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "$COLOR1${NC}${WH}${vmesslink3}${NC}"  | tee -a /etc/xray/log-create-${user}.log
+echo -e "$COLOR1──────────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "$COLOR1 ${NC} ${COLOR1}Format OpenClash     ${WH}: https://${domain}:81/vmess-$user.txt"
 echo -e "$COLOR1──────────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "$COLOR1 ${NC}${WH}Expired On     ${COLOR1}: ${WH}$exp" | tee -a /etc/xray/log-create-${user}.log
 echo -e "$COLOR1──────────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log

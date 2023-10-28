@@ -1,0 +1,31 @@
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC} ${COLBG1}               • MENU VLESS •                  ${NC} $COLOR1 $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
+echo -e " $COLOR1 $NC ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD VLESS${NC}     ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}CEK CONFIG${NC}   $COLOR1 $NC"
+echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+echo -e " $COLOR1 $NC ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}RENEW VLESS${NC}   ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}TRIAL VLESS${NC}     $COLOR1 $NC"
+echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+echo -e " $COLOR1 $NC ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}DELETE VLESS${NC}  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}UUID VLESS${NC}     $COLOR1 $NC" 
+echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+echo -e " $COLOR1 $NC ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}USER ONLINE${NC}                              $COLOR1 $NC"
+echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+echo -e " $COLOR1 $NC ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
+echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC}${COLBG1}                ${WH}• $author •                 $COLOR1 $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e ""
+echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
+case $opt in
+1) clear ; add-vless ; exit ;;
+2) clear ; renew-vless ; exit ;;
+3) clear ; del-vless ; exit ;;
+4) clear ; cek-vless ; exit ;;
+5) clear ; list-vless ; exit ;;
+6) clear ; trial-vless ; exit ;;
+7) clear ; add-vls ; exit ;;
+0) clear ; menu ; exit ;;
+x) exit ;;
+*) echo "salah tekan sayang " ; sleep 1 ; menu-vless ;;
+esac

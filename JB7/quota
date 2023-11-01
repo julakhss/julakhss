@@ -7,7 +7,7 @@ KEY=$(grep -E "^#bot# " "/etc/bot/.bot.db" | cut -d ' ' -f 2)
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 TEXT="
 <code>────────────────────</code>
-<b>⚠️NOTIF LIMIT QUOTA SC V.1.0⚠️</b>
+<b>⚠️NOTIF LIMIT QUOTA SC JB-01 LITE⚠️</b>
 <code>────────────────────</code>
 <code>Username  : </code><code>$user</code>
 <code>Limit Quota  : </code><code>$bol</code>

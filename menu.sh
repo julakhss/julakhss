@@ -261,7 +261,7 @@ echo -e " $COLOR1┌────────────────────
 echo -e " $COLOR1│ \033[0m ${BOLD}${YELLOW}SSH     VMESS      VLESS     TROJAN     SHADOWSOCKS$NC"
 echo -e " $COLOR1│ \033[0m ${Blue} $ssh1        $vmc          $vlx         $trx             $ssx   $NC"
 echo -e " $COLOR1└─────────────────────────────────────────────────────┘${NC}" 
-echo -e " \E[44;1;39m                     ⚠ Menu Utama ⚠                   \E[0m"
+echo -e " ${BIYellow}                  🔥 MENU UTAMA 🔥${NC} "
 echo -e "$COLOR1 ┌─────────────────────────────────────────────────────┐${NC}" | lolcat
 echo -e " $COLOR1│$NC    ${BICyan}[${WH}01${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 SSH     ${NC}" "     ${BICyan}[${WH}06${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 SETTING     ${NC}" "${COLOR1}│${NC}"
 echo -e " $COLOR1│$NC    ${BICyan}[${WH}02${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 VMESS   ${NC}" "     ${BICyan}[${WH}07${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 RUNNING     ${NC}" "${COLOR1}│${NC}"

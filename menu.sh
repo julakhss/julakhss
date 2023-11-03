@@ -229,9 +229,9 @@ export sem=$( curl -s https://raw.githubusercontent.com/bagusid93/sc3/main/versi
 IPVPS=$(curl -s ipinfo.io/ip )
 
 # IBAM
-ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
-CITY=$(curl -s ipinfo.io/city )
-WKT=$(curl -s ipinfo.io/timezone )
+ISP=$(curl -s ipinfo.io/org?token=aa37b1e79a1d8b | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city?token=aa37b1e79a1d8b )
+WKT=$(curl -s ipinfo.io/timezone?token=aa37b1e79a1d8b )
 
 data_ip="https://raw.githubusercontent.com/bagusid93/hss/main/sc3"
 d2=$(date -d "$date_list" +"+%s")

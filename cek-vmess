@@ -65,10 +65,10 @@ wey=$(cat /etc/limit/vmess/${akun})
 gb=$(con ${wey})
 lastlogin=$(cat /var/log/xray/access.log | grep -w "$akun" | tail -n 500 | cut -d " " -f 2 | tail -1)
 echo -e " $COLOR1┌──────────────────────────────────────┐$NC"
-printf "  %-13s %-7s %-8s %2s\n"   "  USEENAME : ${akun}"
-printf "  %-13s %-7s %-8s %2s\n" "  LOGIN    : $lastlogin"
-printf "  %-13s %-7s %-8s %2s\n" "  LIMIT GB : ${gb}"
-printf "  %-13s %-7s %-8s %2s\n" "  LIMIT IP : $jum2/$iplimit"
+printf "  %-13s %-7s %-8s %2s\n" "  USERNAME   : ${akun}"
+printf "  %-13s %-7s %-8s %2s\n" "  TIME LOGIN : $lastlogin"
+printf "  %-13s %-7s %-8s %2s\n" "  USER QUOTA : ${gb}"
+printf "  %-13s %-7s %-8s %2s\n" "  LIMIT IP   : $jum2/$iplimit"
 echo -e " $COLOR1└──────────────────────────────────────┘$NC"
 fi 
 rm -rf /tmp/ipvmess.txt

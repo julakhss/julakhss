@@ -1,5 +1,7 @@
 #!/bin/bash
 
+apt install lolcat -y
+gem install lolcat
 apt install figlet -y
 mkdir -p /etc/julak
 mkdir -p /etc/julak/theme

@@ -54,10 +54,10 @@ jum2=$(cat /tmp/ipvmess.txt | wc -l)
 wey=$(cat /etc/limit/vmess/${akun})
 gb=$(con ${wey})
 lastlogin=$(cat /var/log/xray/access.log | grep -w "$akun" | tail -n 500 | cut -d " " -f 2 | tail -1)
-echo -e "$COLOR1${NC} USERNAME : \033[0;33m$akun";
+echo -e "$COLOR1${NC} USERNAME   : \033[0;33m$akun";
 echo -e "$COLOR1${NC} TIME LOGIN : \033[0;33m$lastlogin";
 echo -e "$COLOR1${NC} USER QUOTA : \033[0;33m$gb";
-echo -e "$COLOR1${NC} LIMIT IP : \033[0;33m$jum2/$iplimit";
+echo -e "$COLOR1${NC} LIMIT IP   : \033[0;33m$jum2/$iplimit";
 echo -e ""
 
 
@@ -66,10 +66,10 @@ TEXT="
 <b>  ⚠️ XRAY VMESS NOTIF ⚠️</b>
 <b>      User Login</b>
 <code>◇━━━━━━━━━━━━━━◇</code>
-<b>USERNAME  :</b> <code>${akun} </code>
-<b>TIME LOGIN    :</b> <code>${lastlogin} </code>
-<b>USER QUOTA    :</b> <code>${gb} </code>
-<b>LIMIT IP  :</b> <code>${jum2}/${iplimit} </code>
+<b>USERNAME   :</b> <code>${akun} </code>
+<b>TIME LOGIN :</b> <code>${lastlogin} </code>
+<b>USER QUOTA :</b> <code>${gb} </code>
+<b>LIMIT IP   :</b> <code>${jum2}/${iplimit} </code>
 <code>◇━━━━━━━━━━━━━━◇</code>
 "
 

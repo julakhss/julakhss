@@ -270,8 +270,8 @@ echo -e " $COLOR1│$NC    ${BICyan}[${WH}01${BICyan}]${BICyan}[${BIYellow}Menu$
 echo -e " $COLOR1│$NC    ${BICyan}[${WH}02${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 VMESS   ${NC}" "     ${BICyan}[${WH}07${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 RUNNING     ${NC}" "${COLOR1}│${NC}"
 echo -e " $COLOR1│$NC    ${BICyan}[${WH}03${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 VLESS   ${NC}" "     ${BICyan}[${WH}08${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 THEME       ${NC}" "${COLOR1}│${NC}"
 echo -e " $COLOR1│$NC    ${BICyan}[${WH}04${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 TROJAN  ${NC}" "     ${BICyan}[${WH}09${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 BACKUP      ${NC}" "${COLOR1}│${NC}"
-echo -e " $COLOR1│$NC    ${BICyan}[${WH}05${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 SHADOWSOCKS     ${NC}" "     ${BICyan}[${WH}10${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 UPDATE AUTOSCRIPT  ${NC}" "${COLOR1}│${NC}"
-echo -e " $COLOR1└─────────────────────────────────────────────────────┘${NC}"
+echo -e " $COLOR1│$NC    ${BICyan}[${WH}05${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 SHADOWSOCKS${NC}" "  ${BICyan}[${WH}10${BICyan}]${BICyan}[${BIYellow}Menu${BICyan}]$COLOR1 UPDATE AUTOSCRIPT  ${NC}" "${COLOR1}│${NC}"
+echo -e " $COLOR1└─────────────────────────────────────────────────────┘${NC}
 echo -e "$COLOR1 ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} ${NC}  ${BICyan}HARI ini${NC}: ${Blue}$ttoday$NC ${BICyan}KEMARIN${NC}: ${Blue}$tyest$NC ${BICyan}BULAN${NC}: ${Blue}$tmon$NC $NC"
 echo -e "$COLOR1 └─────────────────────────────────────────────────────┘${NC}"

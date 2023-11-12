@@ -1,32 +1,26 @@
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}              ${WH}• MENU PANEL TROJAN •                $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}              ${WH}• SSWS PANEL MENU •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1 $NC ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD TROJAN${NC}     ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}CEK CONFIG${NC}   $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD SSWS${NC}      ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}DELETE SSWS${NC}     $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}RENEW SSWS${NC}    ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}USER ONLINE${NC}     $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}TRIAL SSWS${NC}      ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}USER CONFIG SSWS${NC}     $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e " $COLOR1 $NC ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}RENEW TROJAN${NC}   ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}TRIAL TROJAN${NC}     $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e " $COLOR1 $NC ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}DELETE TROJAN${NC}  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}UUID TROJAN${NC}     $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e " $COLOR1 $NC ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}USER ONLINE${NC}    ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}CHANGE LIMIT IP${NC}     $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e " $COLOR1 $NC ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                                  $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}              ${WH}• $author •                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e ""
-echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
+echo " "
+echo -ne " Select menu : "; read opt
 case $opt in
-01 | 1) clear ; add-tr ;;
-02 | 2) clear ; renew-tr ;;
-03 | 3) clear ; del-tr ;;
-04 | 4) clear ; cek-tr ;;
-05 | 5) clear ; list-trojan ;;
-06 | 6) clear ; trial-trojan ;;
-07 | 7) clear ; add-tru ;;
-08 | 8) clear ; chngelimit ;;
+01 | 1) clear ; addss ;;
+02 | 2) clear ; renewss ;;
+03 | 3) clear ; renew-ssws ;;
+04 | 4) clear ; delss ;;
+05 | 5) clear ; cekss ;;
+06 | 6) clear ; listss ;;
 00 | 0) clear ; menu ;;
 x) exit ;;
-*) echo "SALAH TEKAN SAYANG" ; sleep 1 ; menu-trojan ;;
+*) echo "salah tekan" ; sleep 1 ; m-ssws ;;
 esac

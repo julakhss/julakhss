@@ -1,32 +1,32 @@
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• VMESS PANEL MENU •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}               • MENU VLESS •                  ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1 $NC ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD VMESS${NC}       ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}CEK CONFIG${NC}   $COLOR1 $NC"
+echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
+echo -e " $COLOR1 $NC ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD VLESS${NC}     ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}CEK CONFIG${NC}   $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e " $COLOR1 $NC ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}RENEW VMESS${NC}     ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}TRIAL VMESS${NC}    $COLOR1 $NC"
+echo -e " $COLOR1 $NC ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}RENEW VLESS${NC}   ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}TRIAL VLESS${NC}     $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e " $COLOR1 $NC ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}DELETE VMESS${NC}    ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}UUID VMESS${NC}    $COLOR1 $NC"
+echo -e " $COLOR1 $NC ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}DELETE VLESS${NC}  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}UUID VLESS${NC}     $COLOR1 $NC" 
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e " $COLOR1 $NC ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}USER ONLINE${NC}     ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}CHANGE LIMIT IP${NC}    $COLOR1 $NC"
+echo -e " $COLOR1 $NC ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}USER ONLINE${NC}  ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}CHANGE LIMIT IP${NC}     $COLOR1 $NC" 
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e " $COLOR1 $NC ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• $author •              $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}${COLBG1}                ${WH}• $author •                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
 case $opt in
-01 | 1) clear ; add-vmess ;;
-02 | 2) clear ; renew-vmess ;;
-03 | 3) clear ; del-vmess ;;
-04 | 4) clear ; cek-vmess ;;
-05 | 5) clear ; list-vmess ;;
-06 | 6) clear ; trial-vmess ;;
-07 | 7) clear ; add-vms ;;
-08 | 8) clear ; chngelimit ;;
-00 | 0) clear ; menu ;;
-xx | x) clear ; exit ;;
-*) clear ; menu-vmess ;;
+1) clear ; add-vless ; exit ;;
+2) clear ; renew-vless ; exit ;;
+3) clear ; del-vless ; exit ;;
+4) clear ; cek-vless ; exit ;;
+5) clear ; list-vless ; exit ;;
+6) clear ; trial-vless ; exit ;;
+7) clear ; add-vls ; exit ;;
+8) clear ; chngelimit ; exit ;;
+0) clear ; menu ; exit ;;
+x) exit ;;
+*) echo "salah tekan sayang " ; sleep 1 ; menu-vless ;;
 esac

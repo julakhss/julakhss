@@ -1,4 +1,3 @@
-GNU nano 4.6     menu-trgo.sh
 #Encrypt by Sumarr ID
 #Gitlab : Https://gitlab.com/Sumarr-ID
 import marshal

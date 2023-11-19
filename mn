@@ -24,10 +24,10 @@ echo -e "${WH}PORT SLWDNS      ${COLOR1}: ${WH}80,22,53" | tee -a /etc/xray/log-
 echo -e "${WH}NAMESERVER       ${COLOR1}: ${WH}$sldomain" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}PUB KEY          ${COLOR1}: ${WH}$slkey" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "$COLOR1─────────────────${NC}" | tee -a /etc/xray/log-createssh-${user}.log
-echo -e "${COLOR1}Payload WS :                                      ${NC}" | tee -a /etc/xray/log-createssh-${user}.log
+echo -e "${COLOR1}Payload WS & WSS :                                      ${NC}" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}GET wss:///$domain/ [protocol][crlf]Host: bug.mu[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "$COLOR1─────────────────${NC}" | tee -a /etc/xray/log-createssh-${user}.log
-echo -e "${COLOR1}SSH UDP :                  ${NC}" | tee -a /etc/xray/log-createssh-${user}.log
+echo -e "${COLOR1}SSH UDP CUSTOM   :                  ${NC}" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${WH}$domain:1-65535@$user:$PASSWD${NC}" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "$COLOR1─────────────────${NC}" | tee -a /etc/xray/log-createssh-${user}.log
 echo -e "${COLOR1}Save Link Account:${NC}" | tee -a /etc/xray/log-createssh-${user}.log

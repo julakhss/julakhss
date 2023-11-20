@@ -291,13 +291,13 @@ fi
 #END
 #fi
 
-#if [ ! -f "/etc/cron.d/cleaner" ]; then
-#cat> /etc/cron.d/cleaner << END
-#SHELL=/bin/sh
-#PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-#*/2 * * * * root /usr/bin/cleaner
-#END
-#fi
+if [ ! -f "/etc/cron.d/cl_otm" ]; then
+cat> /etc/cron.d/cl_otm << END
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+*/59 * * * * root /usr/local/sbin/clearlog
+END
+fi
 
 if [ ! -f "/etc/cron.d/re_otm" ]; then
 cat> /etc/cron.d/re_otm << END

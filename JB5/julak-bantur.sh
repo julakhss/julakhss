@@ -1,7 +1,8 @@
 #!/bin/bash
 # Script By Julak Bantur
 # ==================================================
-julak="raw.githubusercontent.com/bagusid93/sc3/main"
+julak="raw.githubusercontent.com/kdg-hss/punya93/main"
+bantur="raw.githubusercontent.com/julakhss/julakhss/main"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -129,10 +130,10 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/julakhss/julakhss/main/JB3/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://${bantur}/JB3/nginx.conf"
 mkdir -p /home/vps/public_html
 rm /etc/nginx/conf.d/vps.conf
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/julakhss/julakhss/main/JB3/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://${bantur}/JB3/vps.conf"
 /etc/init.d/nginx restart
 
 # install badvpn

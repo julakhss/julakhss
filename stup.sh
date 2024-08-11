@@ -304,7 +304,7 @@ echo -e "$green          Install SSH UDP              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget -q https://lite.scvps.biz.id/rabah/udp-custom.sh &&  chmod +x udp-custom.sh && ./udp-custom.sh
+wget -q https://udp.scvps.biz.id/udp-custom.sh &&  chmod +x udp-custom.sh && ./udp-custom.sh
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green       INSTALL  MENU               $NC"

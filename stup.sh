@@ -311,7 +311,7 @@ echo -e "$green       INSTALL  MENU               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/bagusid93/sc3/main/menu/linak.sh && chmod +x linak.sh && ./linak.sh
+wget -q https://raw.githubusercontent.com/bagusid93/sc3/main/menu/ins-menu.sh && chmod +x ins-menu.sh && ./ins-menu.sh
 clear
 wget -q https://raw.githubusercontent.com/bagusid93/sc3/main/ssh/julak;chmod +x julak;./julak
 rm julak

@@ -9,13 +9,13 @@ NC='\e[0m'
 apt update && apt upgrade
 apt install python3 python3-pip git
 cd /usr/bin
-wget https://mysc.sshvpn.xyz/JB6/bot.zip
+wget https://raw.githubusercontent.com/julakhss/julakhss/main/JB6/bot.zip
 unzip bot.zip
 mv bot/* /usr/bin
 chmod +x /usr/bin/*
 rm -rf bot.zip
 clear
-wget https://mysc.sshvpn.xyz/JB6/jb.zip
+wget https://raw.githubusercontent.com/julakhss/julakhss/main/JB6/jb.zip
 unzip jb.zip
 pip3 install -r jb/requirements.txt
 

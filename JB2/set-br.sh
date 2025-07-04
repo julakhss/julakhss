@@ -44,18 +44,18 @@ logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://raw.githubusercontent.com/julakhss/julakhss/main/JB2/autobackup.sh"
-wget -O backup "https://raw.githubusercontent.com/julakhss/julakhss/main/JB2/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/julakhss/julakhss/main/JB2/restore.sh"
-wget -O strt "https://raw.githubusercontent.com/julakhss/julakhss/main/JB2/strt.sh"
-wget -O limitspeed "https://raw.githubusercontent.com/julakhss/julakhss/main/JB2/limitspeed.sh"
-wget -O xp "https://raw.githubusercontent.com/bagusid93/sc3/main/ssh/xp.sh"
+#wget -O autobackup "https://raw.githubusercontent.com/julakhss/julakhss/main/JB2/autobackup.sh"
+wget -O bokep "https://raw.githubusercontent.com/julakhss/julakhss/main/JB2/backup.sh"
+wget -O reskep "https://raw.githubusercontent.com/julakhss/julakhss/main/JB2/restore.sh"
+#wget -O strt "https://raw.githubusercontent.com/julakhss/julakhss/main/JB2/strt.sh"
+#wget -O limitspeed "https://raw.githubusercontent.com/julakhss/julakhss/main/JB2/limitspeed.sh"
+#wget -O xp "https://raw.githubusercontent.com/bagusid93/sc3/main/ssh/xp.sh"
 
-chmod +x autobackup
-chmod +x backup
-chmod +x restore
-chmod +x strt
-chmod +x limitspeed
-chmod +x xp
+#chmod +x autobackup
+chmod +x bokep
+chmod +x reskep
+#chmod +x strt
+#chmod +x limitspeed
+#chmod +x xp
 cd
 echo ""

@@ -25,7 +25,8 @@ cp passwd /etc/
 cp group /etc/
 cp shadow /etc/
 cp gshadow /etc/
-cp -r var/lib/julak
+cp -r limit /etc/cbt/
+cp -r var/lib/
 echo -e "\033[0;34m Proses Restore file \033[0m"
 cp -r per /etc/
 echo -e "\033[0;34m Proses Restore Xray \033[0m"

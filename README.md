@@ -15,7 +15,7 @@
 
 ## 👋 Tentang Saya
 
-Halo! Gue **Julak**, pelajar yang fokus di dunia scripting dan otomasi.  
+Halo bro ! Gue **Julak Bantur**, pemula yang fokus di dunia scripting dan otomasi.  
 Awalnya cuma suka **ngoprek dan ngebenerin bug**, tapi lama-lama gue sadar:  
 > “Fixer itu cuma awal. Builder itu tujuan.”
 
@@ -53,7 +53,7 @@ Bagi gue, teknologi itu bukan cuma alat — tapi *bahasa ekspresi logika*.
 ## 🌐 Connect With Me
 
 [![GitHub](https://img.shields.io/badge/GitHub-julakhss-181717?logo=github&logoColor=white)](https://github.com/julakhss)
-[![Telegram](https://img.shields.io/badge/Telegram-@Julak-blue?logo=telegram&logoColor=white)](https://t.me/Julak)
+[![Telegram](https://img.shields.io/badge/Telegram-@Julak-blue?logo=telegram&logoColor=white)](https://t.me/rajaganjil93)
 [![Email](https://img.shields.io/badge/Email-Contact-blue?logo=gmail&logoColor=white)](mailto:julakhss@gmail.com)
 
 ---

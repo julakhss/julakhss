@@ -15,12 +15,22 @@
 
 ## 👋 Tentang Saya
 
-Halo bro ! Gue **Julak Bantur**, pemula yang fokus di dunia scripting dan otomasi.  
+Halo! Gue **Julak**, pelajar yang fokus di dunia scripting dan otomasi.  
 Awalnya cuma suka **ngoprek dan ngebenerin bug**, tapi lama-lama gue sadar:  
 > “Fixer itu cuma awal. Builder itu tujuan.”
 
 Sekarang gue lagi belajar bikin **tools CLI**, **bot Telegram**, dan sistem otomasi yang bisa dipakai banyak orang.  
 Gue percaya semua kode punya cerita — dan gue pengin ngerti setiap bab-nya.
+
+---
+
+## 🔥 Forge of the Fixer — Current Phase  
+> “Setiap bug adalah bara. Setiap error adalah palu. Dan di antaranya, gue ditempa.”  
+
+Sekarang gue lagi ada di fase di mana fokus gue bukan cuma bikin sesuatu jalan,  
+tapi **paham setiap denyut sistem yang gue bangun**.  
+Gue lagi ngulik habis-habisan dunia CLI, bot Telegram, dan otomasi server —  
+karena di sinilah tempat paling tepat buat *seorang fixer ditempa jadi builder sejati.*
 
 ---
 
@@ -60,3 +70,4 @@ Bagi gue, teknologi itu bukan cuma alat — tapi *bahasa ekspresi logika*.
 
 ### ✨ “Build. Break. Learn. Repeat.”  
 > ⚙️ From Fixer → Builder | Always Learning | Always Building
+> 
